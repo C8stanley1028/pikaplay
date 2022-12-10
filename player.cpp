@@ -24,7 +24,7 @@ void player1_position()
     {
         player1_pos_X += RIGHT_MOVE;
     }
-    if(keystate[SDL_SCANCODE_LEFT])
+    if(keystate[SDL_SCANCODE_LEFT] && player1_pos_x > 0)
     {
         player1_pos_X += LEFT_MOVE;
     }
@@ -50,7 +50,7 @@ void player2_position()
     {
         player2_isJumping = true;
     }
-    if(keystate[SDL_SCANCODE_RIGHT])
+    if(keystate[SDL_SCANCODE_RIGHT] && player2_pos_x < 800)
     {
         player2_pos_X += RIGHT_MOVE;
     }
