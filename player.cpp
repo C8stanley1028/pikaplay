@@ -20,11 +20,11 @@ void player1_position()
     {
         player1_isJumping = true;
     }
-    if(keystate[SDL_SCANCODE_RIGHT] && player1_pos_x < 400)
+    if(keystate[SDL_SCANCODE_RIGHT] && player1_pos_X < 400)
     {
         player1_pos_X += RIGHT_MOVE;
     }
-    if(keystate[SDL_SCANCODE_LEFT] && player1_pos_x > 0)
+    if(keystate[SDL_SCANCODE_LEFT] && player1_pos_X > 0)
     {
         player1_pos_X += LEFT_MOVE;
     }
@@ -35,7 +35,7 @@ void player1_position()
         player1_jump_V -= G * player1_jumptime;
         player1_jumptime += 1;
         
-        if(jumptime == 80)
+        if(player1_jumptime == 80)
         {
             player1_pos_Y = 600;
             player1_jump_V = -12;
@@ -50,11 +50,11 @@ void player2_position()
     {
         player2_isJumping = true;
     }
-    if(keystate[SDL_SCANCODE_RIGHT] && player2_pos_x < 800)
+    if(keystate[SDL_SCANCODE_RIGHT] && player2_pos_X < 800)
     {
         player2_pos_X += RIGHT_MOVE;
     }
-    if(keystate[SDL_SCANCODE_LEFT] && player2_pos_x > 400)
+    if(keystate[SDL_SCANCODE_LEFT] && player2_pos_X > 400)
     {
         player2_pos_X += LEFT_MOVE;
     }
@@ -65,7 +65,7 @@ void player2_position()
         player2_jump_V -= G * player2_jumptime;
         player2_jumptime += 1;
         
-        if(jumptime == 80)
+        if(player2_jumptime == 80)
         {
             player2_pos_Y = 600;
             player2_jump_V = -12;
